@@ -1,0 +1,289 @@
+:root {
+    --color-black: #0E0E0E;
+    --color-footer-text1: #ECECEC;
+    --color-footer-background: #202020;
+    --color-background: #FAFAFA;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+main{
+    font-family: "Source Sans 3", sans-serif;
+    background-color: var(--color-background);
+}
+
+footer{
+    justify-items: center;
+    background-color: var(--color-footer-background);
+    
+    color: var(--color-footer-text1);
+    padding: 2.25rem;
+    line-height: 0.5em;
+    font-size: 0.75rem;
+}
+
+
+nav{
+    box-sizing: border-box;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    background: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--color-black);
+}
+
+nav h2{
+    font-size: 0.84375rem;
+}
+
+ul{
+    display:flex;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    text-transform: uppercase;
+    list-style-type: none;
+    gap: 2em;
+}
+
+li a{
+    color: #090909;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: #666666;
+}
+
+.hero-section{
+    background-image: url("images/blog-image-hero.png");
+    background-size: cover;
+    background-position: center;
+    
+    color: white;
+    padding-bottom: 1.25em;
+    padding-top: 5.5em;
+    box-sizing: inherit;
+}
+
+.hero-section a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.hero-section .container:hover{
+    color: #CCCCCC;
+}
+
+.hero-date,
+.article-date{
+    font-size: 0.75rem;
+}
+
+.hero-title,
+.article-title{
+    font-size: 2rem;
+}
+
+.hero-preview,
+.article-paragraph,
+.article-header,
+.recent-posts,
+.about-me-header,
+.about-me-paragraph{
+    font-size: 1rem;
+}
+
+.about-me-intro{
+    margin-bottom: 3em;
+}
+
+.about-me-title{
+    font-size: 2.125rem;
+}
+.blog-listing{
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+}
+
+.blog-listing img{
+    grid-area: blog;
+    width: 100%;
+    
+    height: 232px;
+    object-fit: cover;
+}
+
+.blog-date{
+    font-size: 0.875rem;
+    margin-top: 0.875rem;
+}
+
+.blog-title{
+    font-size: 1.5rem;
+    margin-top: 0.5625em;
+}
+
+.blog-preview{
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+}
+
+.article-section,
+.about-me-section{
+    margin-top: 3em;
+}
+
+.about-me-title-paragraph,
+.view-more-text{
+    font-size: 1rem;
+}
+
+.section-list{
+    margin-top: 2em;
+}
+
+.section-list .container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.article-img{
+    margin: 1.5em 0;
+}
+
+
+.article-section img{
+    width: 100%;
+}
+
+.container{
+    margin: 0 1.5em;
+}
+
+.recent-posts{
+    margin-top: 3em;
+}
+
+.img-avatar{
+    object-fit: contain;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.center{
+    text-align: center;
+}
+
+@media (min-width: 600px){
+    
+    nav{
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+    
+    nav h2,
+    .about-me-header{
+        font-size: 1.25rem;
+    }
+    
+    .container{
+        margin: 0 3.3125em;
+    }
+    
+    .hero-title{
+        font-size: 2.5rem;
+    }
+    
+    nav,
+    .hero-date, 
+    .article-date{
+        font-size: 1rem;
+    }
+    
+    .hero-section{
+        padding-top: 25%;
+        padding-bottom: 5%;
+    }
+     
+    .section-list{
+        margin-top: 2.5em;
+    }
+    
+    .about-me-intro{
+        display: flex;
+        gap: 2em;
+    }
+    
+    .about-me-section{
+        margin-top: 5em;
+    }
+    
+    .about-me-header,
+    .about-me-paragraph{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
+    .recent-posts,
+    .article-header{
+        font-size: 1.5rem;
+    }
+    
+    .article-title{
+        font-size: 2.25rem;
+    }
+    
+    .article-paragraph{
+        font-size: 1.125rem
+    }
+    
+    .article-title,
+    .article-date,
+    .article-header,
+    .article-paragraph{
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+    }
+    
+    .section-list .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "hero hero hero"
+        "blog blog blog" 
+        "blog blog blog" ;
+        gap: 0 1.625em;
+    }
+    
+    .blog-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 0 1.625em;
+    }
+    
+    .view-more-text{
+        font-size: 0.875rem;
+    }
+}
