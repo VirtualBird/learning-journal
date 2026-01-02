@@ -70,7 +70,7 @@ li a:hover{
 }
 
 .hero-section{
-    background-image: url("images/blog-image-hero.png");
+    background: var(--color-black) url("/images/blog-image-hero.png");
     background-size: cover;
     background-position: center;
     
